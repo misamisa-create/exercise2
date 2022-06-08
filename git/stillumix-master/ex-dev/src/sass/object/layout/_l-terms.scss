@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-terms {
+  background-color: $beige;
+  padding-top: rem(64);
+  padding-bottom: rem(77);
+  @include mq('md') {
+    padding-top: rem(70);
+    padding-bottom: rem(99);
+  }
+}

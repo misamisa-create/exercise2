@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.p-entry {
+  background-color: $gray;
+  padding: rem(18) rem(20) rem(46) rem(17);
+  border-radius: rem(8);
+  @include mq('md') {
+    padding: rem(33) rem(63) rem(72) rem(59);
+  }
+}
+
+.p-entry__header {
+  text-align: center;
+}
+
+.p-entry__periodWrap {
+  text-align: center;
+}
+
+.p-entry__period {
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: $bold;
+  line-height: calc( 24/12);
+  letter-spacing: 0.05em;
+  color: $main-blue;
+  font-family: $ja-second-font-family;
+  text-align: left;
+  margin-top: rem(24);
+  padding-right: rem(10);
+  @include mq('md') {
+    font-size: rem(20);
+    line-height: calc( 28/20);
+    margin-top: rem(51);
+    padding-right: rem(48);
+  }
+}
+
+.p-entry__period span {
+  display: block;
+  @include mq('md') {
+    display: inline-block;
+  }
+}
+
+.p-entry__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(16);
+  padding-bottom: rem(15);
+  @include mq('md') {
+    margin-top: rem(39);
+    padding-bottom: rem(29.5);
+  }
+}
+
+.p-entry__circle-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(42);
+}

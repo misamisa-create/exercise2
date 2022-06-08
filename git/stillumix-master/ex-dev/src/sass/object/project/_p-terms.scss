@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.p-terms__text + .p-terms__text {
+  margin-top: rem(20);
+  @include mq('md') {
+    margin-top: rem(38);
+  }
+}

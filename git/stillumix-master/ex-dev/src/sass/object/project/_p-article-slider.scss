@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.p-article-slider {
+  margin: 0 auto;;
+  width: 100%;
+  @include mq('md') {
+    height: rem(887);
+  }
+}
+
+.p-article-slider__cards {           
+  width: 61.6%;
+  margin: 0 rem(5);
+  height: rem(535);
+  @include mq('md') {
+    margin: 0 rem(18);
+    height: 100vw;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+
+.p-article-slider__card {
+  width: 100%;
+  height: auto;
+}
+
+.p-article-slider__card + .p-article-slider__card {
+  margin-top: rem(12);
+  @include mq('md') {
+    margin-top: rem(45);
+  }
+}

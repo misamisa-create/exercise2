@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.l-about {
+  background-color: $bg-blue;
+  padding-top: rem(29);
+  padding-bottom: rem(35);
+  @include mq('md') {
+    padding-top: rem(56.4);
+    padding-bottom: rem(58);
+  }
+}
+
+.l-aboutinner {
+  
+}

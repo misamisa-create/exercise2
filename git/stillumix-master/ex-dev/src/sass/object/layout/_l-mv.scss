@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-mv {
+  padding-top: rem(73);
+  background-color: $bg-blue;
+  @include mq('md') {
+    padding-top: rem(65);
+  }
+}

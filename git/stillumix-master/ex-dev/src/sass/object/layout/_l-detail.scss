@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-detail {
+  background-color: $bg-blue;
+  padding-top: rem(45);
+  padding-bottom: rem(77);
+  @include mq('md') {
+    padding-top: rem(105);
+    padding-bottom: rem(120);
+  }
+}

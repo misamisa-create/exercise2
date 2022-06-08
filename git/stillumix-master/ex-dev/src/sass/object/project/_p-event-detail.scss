@@ -1,0 +1,317 @@
+@use "global" as *;
+
+.p-event-detail {
+  
+}
+
+.p-event-detail__contents {
+  display: flex;
+  flex-direction: column;
+  @include mq('md') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: rem(28);
+    grid-row-gap: rem(40);
+  }
+}
+
+.p-event-detail__content {
+  display: contents;
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.p-event-detail__block {
+  background-image: url(../images/top/bg-gray.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: rem(26) rem(18) rem(27) rem(20);
+  border-radius: rem(8);
+  @include mq('md') {
+    padding: rem(56) rem(33) rem(56);
+  }
+}
+
+.p-event-detail__block:nth-child(1) {
+  order: 2;
+  margin-top: rem(42.4);
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+
+.p-event-detail__block:nth-child(2) {
+  order: 3;
+  margin-top: rem(24.2);
+  @include mq('md') {
+    margin-top: rem(135);
+  }
+}
+
+.p-event-detail__date {
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc( 40/20);
+  letter-spacing: 0.1em;
+  font-family: $en-second-font-family;
+  color: $main-blue;
+  border-bottom: 2px solid $main-blue;
+  padding-bottom: rem(7);
+  margin-right: rem(6);
+  text-align: center;
+  @include mq('md') {
+    display: inline-block;
+    font-size: rem(30);
+    line-height: calc( 62/30);
+    margin-left: rem(24);
+    padding: 0 rem(25);
+  }
+}
+
+.p-event-detail__date span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: rem(12);
+  line-height: calc( 24/12);
+  letter-spacing: 0.1em;
+  margin: 0 rem(4);
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc( 64/16);
+    margin: 0 rem(10);
+  }
+}
+
+.p-event-detail__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc( 36/16);
+  letter-spacing: 0.1em;
+  color: $main-blue;
+  margin-top: rem(23);
+  white-space: nowrap;
+  @include mq('md') {
+    font-size: rem(22);
+    line-height: calc( 40/22);
+    margin-top: rem(-13);
+    padding-top: rem(57);
+    white-space: nowrap;
+    padding-left: rem(19);
+  }
+}
+
+.p-event-detail__title span {
+  display: block;
+  font-size: rem(12);
+  line-height: calc( 24/12);
+  font-family: $ja-second-font-family;
+  letter-spacing: 0.1em;
+  margin-left: rem(7);
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc( 40/16);
+    letter-spacing: 0.1em;
+    margin-top: rem(-2);
+    margin-left: rem(17);
+  }
+}
+
+.p-event-detail__text {
+  font-size: rem(12);
+  font-weight: $bold;
+  line-height: calc( 24/12);
+  letter-spacing: 0.1em;
+  color: $main-blue;
+  font-family: $ja-second-font-family;
+  margin-top: rem(23);
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: calc( 28/14);
+    margin-top: rem(19);
+    margin-left: rem(25);
+    margin-right: rem(23);
+  }
+}
+
+.p-event-detail__profile {
+  margin-top: rem(14);
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.p-event-detail__profile + .p-event-detail__profile {
+  margin-top: rem(22);
+  @include mq('md') {
+    padding-bottom: rem(30);
+    margin-top: rem(18);
+  }
+}
+
+.p-event-detail__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(22);
+  @include mq('md') {
+    margin-top: rem(8);
+  }
+}
+
+.p-event-detail__imgWrap {
+  position: relative;
+  order: 1;
+  @include mq('md') {
+    margin: rem(36) rem(50) 0 rem(42);
+  }
+}
+
+.p-event-detail__imgWrap::before {
+  display: block;
+  content:"";
+  padding-top: calc( 300/ 420 * 100%);
+  @include mq('md') {
+    padding-top: calc( 300/ 420 * 100%);
+  }
+}
+
+.p-event-detail__imgWrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-event-detail__reservation {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(52);
+  @include mq('md') {
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: rem(765);
+    column-gap: rem(40);
+    margin-top: rem(99);
+    padding-right: rem(45);
+    margin-left: auto;
+  }
+}
+
+.p-event-detail__reservation-left,
+.p-event-detail__reservation-right {
+  display: contents;
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.p-event-detail__reservation-left {
+  @include mq('md') {
+    width: 68%;
+    margin-top: rem(23);
+    margin-left: rem(5);
+  }
+}
+
+.p-event-detail__reservation-right {
+  @include mq('md') {
+    width: 100%;
+  }
+}
+
+.p-event-detail__reservation-text {
+  order: 1;
+  font-size: rem(12);
+  font-weight: $bold;
+  line-height: calc( 18/12);
+  letter-spacing: 0.05em;
+  color: $white2;
+  text-align: center;
+  margin-left: rem(4);
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: calc( 21/14);
+    text-align: left;
+  }
+}
+
+.p-event-detail__reservation-btn {
+  order: 3;
+  margin-top: rem(16);
+  display: flex;
+  justify-content: center;
+  @include mq('md') {
+    margin-top: rem(56);
+  }
+}
+
+.p-event-detail__reservation-img {
+  order: 2;
+  position: relative;
+  width: 69%;
+  margin: rem(20) auto 0;
+  text-align: center;
+  @include mq('md') {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.p-event-detail__reservation-img::before {
+  display: block;
+  content:"";
+  padding-top: calc( 146/ 259 * 100%);
+  @include mq('md') {
+    padding-top: calc( 224/ 400 * 100%);
+  }
+}
+
+.p-event-detail__reservation-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-event-detail__step {
+  margin-top: rem(62);
+  text-align: center;
+  @include mq('md') {
+    margin-top: rem(76);
+    text-align: left;
+    margin-left: 28.7%;
+  }
+}
+
+.p-event-detail__step-title {
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc( 30/20);
+  letter-spacing: 0.05em;
+  color: $white2;
+  @include mq('md') {
+    font-size: rem(25);
+    line-height: calc( 30/25);
+  }
+}
+
+.p-event-detail__step-text {
+  display: inline-block;
+  text-align-last: left;
+  font-size: rem(12);
+  font-weight: $medium;
+  line-height: calc( 24/12);
+  color: $white2;
+  margin-top: rem(25);
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: calc( 28/14);
+    margin-left: rem(25);
+    margin-top: rem(19);
+  }
+}

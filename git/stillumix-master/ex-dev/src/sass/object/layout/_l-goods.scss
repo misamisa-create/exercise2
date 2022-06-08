@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-goods {
+  background-color: $beige;
+  padding-top: rem(45);
+  padding-bottom: rem(72);
+  @include mq('md') {
+    padding-top: rem(73);
+    padding-bottom: rem(80);
+  }
+}

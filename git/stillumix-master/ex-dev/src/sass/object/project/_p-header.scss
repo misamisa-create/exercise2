@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.p-header {
+  height: rem(58);
+}
+
+.p-header.headerColorScroll {
+  background-color: $bg-blue;
+  transition: color 0.4s ease-out;
+}
+
+.p-header__inner {
+  height: inherit;
+  padding: 0 rem(3);
+  @include mq('md') {
+    padding: 0 rem(97) 0 0;
+  }
+}
+
+.p-header__nav {
+  height: inherit;
+}
+
+.p-header__nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  @include mq('md') {
+    justify-content: flex-end;
+  }
+}
+
+.p-header__nav-item {
+  height: inherit;
+}
+
+.p-header__nav-item a {
+  display: flex;
+  align-items: center;
+  font-size: rem(11);
+  font-weight: $semi-bold;
+  line-height: calc( 40/11);
+  letter-spacing: 0.1em;
+  font-family: $en-base-font-family;
+  color: $white;
+  height: inherit;
+  padding: 0 rem(8.7);
+  @include mq('md') {
+    align-items: flex-end;
+    font-size: rem(12);
+    line-height: calc( 40/12);
+    letter-spacing: 0.3em;
+    padding: 0 rem(10);
+  }
+}
+
+.p-header__vertical-line {
+  width: rem(1);
+  height: rem(14);
+  background-color: $white2;
+  margin: 0 rem(6);
+  @include mq('md') {
+    margin: rem(20) rem(12) 0 rem(9);
+  }
+}

@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.c-top-section-title {
+  display: inline-block;
+  font-size: rem(30);
+  font-weight: $bold;
+  line-height: calc( 40/30);
+  letter-spacing: 0.2em;
+  padding-right: rem(11);
+  color: $main-blue;
+  @include mq('md') {
+    font-size: rem(40);
+    line-height: 1;
+  }
+}
+
+.c-top-section-title--white {
+  color: $white2;
+}

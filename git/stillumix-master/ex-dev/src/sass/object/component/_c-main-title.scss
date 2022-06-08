@@ -1,0 +1,139 @@
+@use "global" as *;
+
+.c-main-title {
+  font-family: $en-base-font-family;
+  @include mq('md') {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.c-main-title--animated {
+  clip-path: inset(0 100% 0 0);
+  transition: 1.4s cubic-bezier(0.37, 0, 0.63, 1);
+  transition-property: clip-path;
+  transition-delay: 0.3s;
+}
+
+.c-main-title--animated.is-animated {
+  clip-path: inset(0);
+}
+
+.c-main-title__sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(12);
+  font-weight: $semi-bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $white2;
+  @include mq('md') {
+    font-size: rem(20);
+    line-height: calc( 40/20);
+  }
+}
+
+.c-main-title__sub::before,
+.c-main-title__sub::after {
+  flex-grow: 1;
+  height: 5px;
+  content: '';
+  border-top: solid 1px $white2;
+  border-bottom: solid 1px $white2;
+}
+
+.c-main-title__sub::before {
+  margin-right: rem(12);
+}
+
+.c-main-title__sub::after {
+  margin-left: rem(22);
+}
+
+.c-main-title__main {
+  font-size: rem(49);
+  font-weight: $bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $white2;
+  margin-top: rem(16);
+  text-align: center;
+  @include mq('md') {
+    font-size: rem(74);
+    margin-top: rem(14);
+  }
+}
+
+.c-main-title__date {
+  display: flex;
+  font-size: rem(43);
+  font-weight: $bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $white2;
+  margin-top: rem(15);
+  @include mq('md') {
+    font-size: rem(65);
+    margin-top: rem(25);
+    align-items: center;
+  }
+}
+
+.c-main-title__date-vertical {
+  font-size: rem(13);
+  font-weight: $bold;
+  line-height: calc( 26/13);
+  letter-spacing: 0.15em;
+  font-family: $en-second-font-family;
+  margin-top: rem(6);
+  writing-mode: vertical-rl;
+  @include mq('md') {
+    font-size: rem(20);
+    line-height: 1;
+    padding-right: 15px;
+    letter-spacing: 0.4em;
+    margin-top: rem(3);
+  }
+}
+
+.c-main-title__date-vertical--year {
+  letter-spacing: 0.15em;
+  margin-top: rem(6);
+}
+
+.c-main-title__arrow {
+  display: inline-block;
+  position: relative;
+  width: rem(41);
+  height: rem(41);
+  @include mq('md') {
+    width: rem(40);
+    height: rem(60);
+    margin-right: rem(25);
+  }
+}
+
+.c-main-title__arrow::before,
+.c-main-title__arrow::after {
+  position: absolute;
+  width: rem(25);
+  height: rem(25);
+  content: '';
+  border-top: solid 1px $white2;
+  border-right: solid 1px $white2;
+  top: 50%;
+  transform: translateY(-50%) rotate( 45deg);
+  @include mq('md') {
+    width: rem(45);
+    height: rem(45);
+  }
+}
+
+.c-main-title__arrow::before {
+  left: rem(-20);
+}
+
+.c-main-title__arrow::after {
+  left: rem(-10);
+}

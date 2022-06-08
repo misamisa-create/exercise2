@@ -1,0 +1,163 @@
+@use "global" as *;
+
+.p-campaign {
+  padding-top: rem(51);
+  padding-bottom: rem(77.5);
+  background-color: $bg-blue;
+  @include mq('md') {
+    padding-top: rem(80);
+    padding-bottom: rem(133);
+  }
+}
+
+.p-campaign__inner {
+
+}
+
+.p-campaign__summary {
+  margin-left: rem(16);
+  @include mq('md') {
+    margin-left: 10%;
+    border-left: 1px solid $gray;
+    padding-left: rem(16);
+  }
+}
+
+.p-campaign__date-img {
+  position: relative;
+  width: 85%;
+  margin: rem(36) auto 0;
+  @include mq('md') {
+    flex: 0 1 36%;
+    margin: rem(40) 0 0 0;
+  }
+}
+
+.p-campaign__date-img::before {
+  display: block;
+  content:"";
+  padding-top: calc( 169/ 282 * 100%);
+  @include mq('md') {
+    padding-top: calc( 220/ 370 * 100%);
+  }
+}
+
+.p-campaign__date-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-campaign__flex-wrap {
+  @include mq('md') {
+    display: flex;
+    align-items: center;
+    column-gap: rem(58);
+    margin-top: rem(51);
+  }
+}
+
+.p-campaign__desc-lists {
+  margin-top: rem(34);
+  @include mq('md') {
+    flex: 1;
+    margin-top: 0;
+  }
+}
+
+.p-campaign__list + .p-campaign__list {
+  margin-top: rem(39);
+  @include mq('md') {
+    margin-left: rem(46);
+    margin-top: rem(56);
+  }
+}
+
+.p-campaign__term {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc( 24/16);
+  letter-spacing: 0.05em;
+  color: $white2;
+  text-indent: -0.3em;
+  padding-left: 0.5em;
+  @include mq('md') {
+    font-size: rem(25);
+    line-height: calc( 30/25);
+  }
+}
+
+.p-campaign__desc {
+  font-size: rem(12);
+  font-weight: $bold;
+  line-height: calc( 24/12);
+  color: $white2;
+  padding: 0 rem(25.5);
+  margin-top: rem(10);
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: calc( 28/14);
+    padding: 0 rem(28.5);
+    margin-top: rem(14);
+  }
+}
+
+.p-campaign__desc span {
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.p-campaign__imgWrap {
+  margin-top: rem(28);
+  @include mq('md') {
+    margin-top: rem(72);
+  }
+}
+
+.p-campaign__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: rem(8);
+  @include mq('md') {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.p-campaign__img::before {
+  display: block;
+  content:"";
+  padding-top: 55%;
+}
+
+.p-campaign__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.p-campaign__detail-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(32);
+  @include mq('md') {
+    justify-content: start;
+    margin-left: rem(105);
+    margin-top: rem(29);
+  }
+}
+
+.p-campaign__btn {
+  margin-top: rem(24);
+  @include mq('md') {
+    margin-top: rem(30);
+    margin-left: rem(103);
+  }
+}

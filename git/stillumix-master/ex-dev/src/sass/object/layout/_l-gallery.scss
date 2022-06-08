@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-gallery {
+  padding-top: rem(53);
+  padding-bottom: rem(59);
+  background-color: $bg-blue;
+  @include mq('md') {
+    padding-top: rem(98);
+    padding-bottom: rem(91);
+  }
+}
